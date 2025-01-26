@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Expense Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Student Expense Tracker!</h1>
+        <form method="POST" action="/" id="expenseForm">
+            <label>Are you a Hosteller or Day Scholar?</label><br>
+            <input type="radio" name="student_type" value="Hosteller" required> Hosteller<br>
+            <input type="radio" name="student_type" value="Day Scholar" required> Day Scholar<br><br>
+            <label>Total Income: </label><input type="number" step="0.01" name="income" required><br>
+            <label>Tuition Expense: </label><input type="number" step="0.01" name="tuition" required><br>
+            <label id="travel_or_hostel_label">Hostel Expense: </label><input type="number" step="0.01" name="hostel_or_travel" required><br>
+            <label>Food Expense: </label><input type="number" step="0.01" name="food" required><br>
+            <label>College Fee: </label><input type="number" step="0.01" name="college_fee" required><br>
+            <label>Miscellaneous Expenses: </label><input type="number" step="0.01" name="miscellaneous" required><br>
+            <label>Domain of Interest: </label><input type="text" name="domain" placeholder="e.g., Technology, Arts" required><br>
+            <button type="submit">Submit</button>
+        </form>
+
+    
+
+    {% if results %}
+        <h2>Income to Expense Ratio</h2>
+        <p>Total Income: ${{ results['income'] }}</p>
+        <p>Total Expenses: ${{ results['total_expenses'] }}</p>
+        <p>Income-to-Expense Ratio: {{ results['ratio'] }}</p>
+
+        {% if results['suggestions'] %}
+            <h2>Suggestions</h2>
+            <ul>
+                {% for suggestion in results['suggestions'] %}
+                    <li>{{ suggestion }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        {% if results['side_hustles'] %}
+            <h2>Suggested Side Hustles</h2>
+            <ul>
+                {% for hustle in results['side_hustles'] %}
+                    <li><a href="{{ hustle }}" target="_blank">{{ hustle }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <h2>Expense Breakdown</h2>
+        <img src="data:image/png;base64,{{ results['graph'] }}" alt="Expense Breakdown">
+
+    {% endif %}
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

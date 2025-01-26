@@ -1,0 +1,66 @@
+* General body styling */
+body {
+    background-color: #f0f8ff;  /* Light blue background */
+    font-family: 'Arial', sans-serif;  /* Arial font for the whole page */
+    margin: 0;
+    padding: 0;
+    color: #333;  /* Dark text color */
+}
+
+/* Style for the header */
+h1 {
+    text-align: center;
+    color: #4CAF50;  /* Green color */
+    padding: 20px 0;
+}
+
+/* Style for paragraphs */
+p {
+    font-size: 18px;
+    color: #555;  /* Slightly lighter gray text */
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* Style for buttons */
+button {
+    background-color: #4CAF50;  /* Green background */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #45a049;  /* Darker green when hovered */
+}
+
+/* Add a container with max width and centering */
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;  /* Adjust heading size for smaller screens */
+    }
+
+    p {
+        font-size: 16px;  /* Smaller font size for paragraphs */
+    }
+
+    button {
+        padding: 10px 20px;  /* Smaller button on small screens */
+    }
+}

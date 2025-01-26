@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Expense Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+
+</head>
+<body>
+    <div class="container">
+        <h1>Student Expense Tracker</h1>
+        <form method="POST" action="/">
+            <label>Are you a Hosteller or Day Scholar?</label>
+            <input type="radio" name="student_type" value="Hosteller" onchange="toggleExpenseField()" required checked> Hosteller
+            <input type="radio" name="student_type" value="Day Scholar" onchange="toggleExpenseField()" required> Day Scholar
+
+            <label>Total Income:</label>
+            <input type="number" name="income" placeholder="Enter total income" step="0.01" required>
+
+            <label>Tuition Expense:</label>
+            <input type="number" name="tuition" placeholder="Enter tuition expense" step="0.01" required>
+
+            <label id="dynamic_label">Hostel Expense:</label>
+            <input id="dynamic_input" type="number" name="hostel_or_travel" placeholder="Enter hostel expense" step="0.01" required>
+
+            <label>Food Expense:</label>
+            <input type="number" name="food" placeholder="Enter food expense" step="0.01" required>
+
+            <label>College Fee:</label>
+            <input type="number" name="college_fee" placeholder="Enter college fee" step="0.01" required>
+
+            <label>Miscellaneous Expenses:</label>
+            <input type="number" name="miscellaneous" placeholder="Enter miscellaneous expense" step="0.01" required>
+
+            <label>Domain of Interest:</label>
+            <input type="text" name="domain" placeholder="e.g., Technology, Arts" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
