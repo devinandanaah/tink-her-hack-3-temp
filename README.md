@@ -86,7 +86,9 @@ For Software:
 
 Screenshots :
 ![2025-01-26 (1)](https://github.com/user-attachments/assets/9a07fc38-93c1-4562-a42e-644eac7115e1)
-![Uploading 2025-01-26 (2).png…]()
+![2025-01-26 (2)](https://github.com/user-attachments/assets/a0ee0537-2032-416d-ac36-79824b2126ed)
+
+
 
 
 
