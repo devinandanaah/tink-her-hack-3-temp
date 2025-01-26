@@ -86,11 +86,17 @@ For Software:
 
 Screenshots :
 ![2025-01-26 (1)](https://github.com/user-attachments/assets/9a07fc38-93c1-4562-a42e-644eac7115e1)
+![Uploading 2025-01-26 (2).png…]()
+
+
+
+
 
 
 Project Demo
 
 Video
+https://drive.google.com/file/d/12Cz_Q1FabqRukob7c99mkMpSZg5hmhCq/view?usp=drivesdk
 
 
 Explains how to use the tracker and its features
